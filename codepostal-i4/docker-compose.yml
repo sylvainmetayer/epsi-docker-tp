@@ -5,8 +5,6 @@ services:
         environment:
           - REDIS_PASSWORD=password
         command: redis-server --appendonly yes
-        volumes:
-          - ../data/redis:/data
         container_name: myredis
     php:
         build: "./php-codepostal/"
