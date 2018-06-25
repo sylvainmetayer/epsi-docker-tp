@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Code postaux - Authentification</title>
+        <script type="text/javascript">
+            function submit_auth() {
+                login = document.form1.ut_login.value;
+                password = document.form1.ut_motdepasse.value;
+                if (login != '' && password != '') {
+                    document.getElementById('form1').submit();
+                } else {
+                    alert('Veuillez saisir un login et un mot de passe.');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form id="form1" name="form1" class="" action="auth.php" method="post">
+            <input type="text" name="ut_login" value="" placeholder="Nom d'utilisateur">
+            <input type="password" name="ut_motdepasse" value="" placeholder="Mot de passe">
+            <input type="button" name="" value="Se connecter" onclick="submit_auth()">
+        </form>
+    </body>
+</html>
