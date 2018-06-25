@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include 'connect.php';
     $redis = new Redis();
     $redis->connect('redis', 6379);
